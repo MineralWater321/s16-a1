@@ -31,6 +31,7 @@ do {
 let word = 'Polyphiloprogenitive';
 console.log(word);
 let wordNew = [];
+let x = 0;
 for(let i = 0; i < word.length; i++){
 
 	if(!(
@@ -40,10 +41,11 @@ for(let i = 0; i < word.length; i++){
 		word[i].toLowerCase() == "o" ||
 		word[i].toLowerCase() == "u" 
 	)) {
-		wordNew[i] = word[i];
+		wordNew[x] = word[i];
+		x += 1;
 		continue;
 	} else {
 		continue;
 	}
 }
-console.log(wordNew);
+console.log(wordNew.join(""));
